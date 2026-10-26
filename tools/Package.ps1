@@ -41,9 +41,6 @@ Copy-Item (Join-Path $BuildDir 'WootingAnalog.dll') $pluginDir
 Copy-Item (Join-Path $BuildDir 'WootingAnalogCheck.exe') $pluginDir
 Copy-Item (Join-Path $root 'scripts\WootingAnalog\*.reds') $scriptDir
 
-$zip = Join-Path $dist "WootingAnalog-$version.zip"
-New-Zip $mod $zip
-
 Copy-Item (Join-Path $root 'tools\Install-WootingAnalog.ps1') $dist
 Copy-Item (Join-Path $root 'tools\Setup.bat') $dist
 Copy-Item (Join-Path $root 'README.md') $dist
@@ -51,6 +48,9 @@ Copy-Item (Join-Path $root 'README.md') $dist
 $setupZip = Join-Path ([IO.Path]::GetTempPath()) "WootingAnalog-$version-setup.zip"
 New-Zip $dist $setupZip
 Move-Item -Force $setupZip (Join-Path $dist "WootingAnalog-$version-setup.zip")
+
+$zip = Join-Path $dist "WootingAnalog-$version.zip"
+New-Zip $mod $zip
 
 Write-Host ""
 Write-Host "Packaged Wooting Analog $version"
