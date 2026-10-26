@@ -1,0 +1,7 @@
+#pragma once
+
+#define WA_VERSION_MAJOR 1
+#define WA_VERSION_MINOR 2
+#define WA_VERSION_PATCH 6
+#define WA_VERSION_STRING "1.2.6"
+#define WA_MOD_NAME "Wooting Analog"
