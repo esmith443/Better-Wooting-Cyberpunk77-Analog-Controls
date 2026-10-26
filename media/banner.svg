@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="Better Wooting: analog controls for Cyberpunk 2077">
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#FCEE0A" stroke-opacity="0.07"/>
+    </pattern>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#000" opacity="0.45"/>
+    </pattern>
+    <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5EF6FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#5EF6FF" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#5EF6FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#FCEE0A"/>
+      <stop offset="0.8" stop-color="#FCEE0A"/>
+      <stop offset="1" stop-color="#4DFF7C"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .f { font-family: Bahnschrift, 'DIN Condensed', 'Arial Narrow', 'Roboto Condensed', 'Segoe UI', sans-serif; font-stretch: condensed; }
+    .b { font-weight: 700; }
+    @keyframes jit { 0%, 86%, 100% { transform: translate(0, 0); } 87% { transform: translate(-8px, 1px); } 89% { transform: translate(7px, -1px); } 91% { transform: translate(-4px, 0); } 93% { transform: translate(3px, 1px); } }
+    .gr { animation: jit 3.8s infinite steps(1); }
+    .gc { animation: jit 3.8s infinite steps(1) reverse; }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    .cur { animation: blink 1s infinite steps(1); }
+    @keyframes sweep { 0% { transform: translateY(-120px); } 100% { transform: translateY(440px); } }
+    .sw { animation: sweep 6s linear infinite; }
+    .bar { transform-box: fill-box; transform-origin: 50% 100%; }
+    @keyframes kw { 0% { transform: scaleY(0.04); } 30% { transform: scaleY(0.62); } 55% { transform: scaleY(1); } 75% { transform: scaleY(0.85); } 100% { transform: scaleY(0.04); } }
+    @keyframes ka { 0%, 40% { transform: scaleY(0.04); } 60% { transform: scaleY(0.74); } 80% { transform: scaleY(0.3); } 100% { transform: scaleY(0.04); } }
+    @keyframes ks { 0%, 70% { transform: scaleY(0.04); } 82% { transform: scaleY(0.41); } 100% { transform: scaleY(0.04); } }
+    @keyframes kd { 0% { transform: scaleY(0.2); } 20% { transform: scaleY(0.04); } 45% { transform: scaleY(0.04); } 65% { transform: scaleY(0.9); } 100% { transform: scaleY(0.2); } }
+    .kw { animation: kw 4.2s ease-in-out infinite; }
+    .ka { animation: ka 4.2s ease-in-out infinite; }
+    .ks { animation: ks 4.2s ease-in-out infinite; }
+    .kd { animation: kd 4.2s ease-in-out infinite; }
+  </style>
+
+  <rect width="1280" height="420" fill="#0A0A0D"/>
+  <rect width="1280" height="420" fill="url(#grid)"/>
+  <rect class="sw" x="0" y="0" width="1280" height="120" fill="url(#sweep)"/>
+
+  <path d="M16 16h48M16 16v48M1264 16h-48M1264 16v48M16 404h48M16 404v-48M1264 404h-48M1264 404v-48" stroke="#FCEE0A" stroke-width="3" fill="none"/>
+
+  <text x="48" y="50" class="f" font-size="16" fill="#5EF6FF" letter-spacing="4" textLength="518" lengthAdjust="spacingAndGlyphs">SYS.MOD://BETTER_WOOTING  ::  ANALOG.INPUT.ONLINE</text>
+  <rect class="cur" x="572" y="37" width="10" height="16" fill="#5EF6FF"/>
+
+  <polygon points="48,68 704,68 744,108 744,200 88,200 48,160" fill="#FCEE0A"/>
+  <text x="76" y="172" class="f b" font-size="100" fill="#0A0A0D" textLength="632" lengthAdjust="spacingAndGlyphs">BETTER WOOTING</text>
+  <rect x="704" y="176" width="24" height="10" fill="#0A0A0D"/>
+
+  <g class="f b" font-size="78">
+    <text class="gr" x="48" y="282" fill="#FF003C" opacity="0.9" textLength="696" lengthAdjust="spacingAndGlyphs">ANALOG CONTROLS</text>
+    <text class="gc" x="48" y="282" fill="#00F0FF" opacity="0.9" textLength="696" lengthAdjust="spacingAndGlyphs">ANALOG CONTROLS</text>
+    <text x="48" y="282" fill="#FCEE0A" textLength="696" lengthAdjust="spacingAndGlyphs">ANALOG CONTROLS</text>
+  </g>
+
+  <text x="50" y="324" class="f" font-size="22" fill="#E6E6E6" opacity="0.8" letter-spacing="5" textLength="690" lengthAdjust="spacing">CYBERPUNK 2077  //  WOOTING ANALOG KEYBOARDS</text>
+
+  <polygon points="800,62 1216,62 1232,78 1232,358 816,358 800,342" fill="#0E0F14" stroke="#FF003C" stroke-opacity="0.55" stroke-width="2"/>
+  <text x="824" y="94" class="f" font-size="15" fill="#FF6359" letter-spacing="4" textLength="234" lengthAdjust="spacingAndGlyphs">INPUT // ANALOG TRAVEL</text>
+  <rect x="1150" y="84" width="58" height="12" fill="#FF003C" opacity="0.8"/>
+
+  <g class="f b">
+    <g transform="translate(968 110)">
+      <polygon points="0,0 84,0 96,12 96,96 12,96 0,84" fill="#14161D" stroke="#5EF6FF" stroke-width="2"/>
+      <rect x="12" y="14" width="10" height="68" fill="#262A33"/>
+      <rect class="bar kw" x="12" y="14" width="10" height="68" fill="url(#fill)"/>
+      <text x="58" y="66" text-anchor="middle" font-size="44" fill="#F2F2F2">W</text>
+    </g>
+    <g transform="translate(854 220)">
+      <polygon points="0,0 84,0 96,12 96,96 12,96 0,84" fill="#14161D" stroke="#5EF6FF" stroke-width="2"/>
+      <rect x="12" y="14" width="10" height="68" fill="#262A33"/>
+      <rect class="bar ka" x="12" y="14" width="10" height="68" fill="url(#fill)"/>
+      <text x="58" y="66" text-anchor="middle" font-size="44" fill="#F2F2F2">A</text>
+    </g>
+    <g transform="translate(968 220)">
+      <polygon points="0,0 84,0 96,12 96,96 12,96 0,84" fill="#14161D" stroke="#5EF6FF" stroke-width="2"/>
+      <rect x="12" y="14" width="10" height="68" fill="#262A33"/>
+      <rect class="bar ks" x="12" y="14" width="10" height="68" fill="url(#fill)"/>
+      <text x="58" y="66" text-anchor="middle" font-size="44" fill="#F2F2F2">S</text>
+    </g>
+    <g transform="translate(1082 220)">
+      <polygon points="0,0 84,0 96,12 96,96 12,96 0,84" fill="#14161D" stroke="#5EF6FF" stroke-width="2"/>
+      <rect x="12" y="14" width="10" height="68" fill="#262A33"/>
+      <rect class="bar kd" x="12" y="14" width="10" height="68" fill="url(#fill)"/>
+      <text x="58" y="66" text-anchor="middle" font-size="44" fill="#F2F2F2">D</text>
+    </g>
+  </g>
+  <text x="824" y="342" class="f" font-size="14" fill="#8A8F99" letter-spacing="3" textLength="407" lengthAdjust="spacingAndGlyphs">0.00 ─────────────── 1.00  // HALL-EFFECT</text>
+
+  <rect x="48" y="368" width="1184" height="2" fill="#FCEE0A" opacity="0.85"/>
+  <rect x="48" y="364" width="120" height="10" fill="#FCEE0A"/>
+  <text x="48" y="398" class="f" font-size="16" fill="#FCEE0A" letter-spacing="4" textLength="847" lengthAdjust="spacingAndGlyphs">ANALOG WALK  ▮  ANALOG DRIVE  ▮  NO GAMEPAD EMULATION  ▮  PATCH-PROOF BINDINGS</text>
+  <text x="1232" y="398" class="f" font-size="14" fill="#5EF6FF" text-anchor="end" letter-spacing="3" textLength="186" lengthAdjust="spacingAndGlyphs">RED4EXT // REDSCRIPT</text>
+
+  <rect width="1280" height="420" fill="url(#scan)" opacity="0.5"/>
+</svg>

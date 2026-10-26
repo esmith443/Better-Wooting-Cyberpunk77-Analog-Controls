@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="150" viewBox="0 0 1280 150" role="img" aria-label="End of transmission. See you in Night City, choom.">
+  <style>
+    .f { font-family: Bahnschrift, 'DIN Condensed', 'Arial Narrow', 'Roboto Condensed', 'Segoe UI', sans-serif; font-stretch: condensed; } .b { font-weight: 700; }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    .cur { animation: blink 1s infinite steps(1); }
+  </style>
+  <polygon points="0,10 1256,10 1280,34 1280,140 24,140 0,116" fill="#0A0A0D"/>
+  <rect x="40" y="34" width="1200" height="2" fill="#FCEE0A" opacity="0.8"/>
+  <rect x="40" y="30" width="140" height="10" fill="#FCEE0A"/>
+  <rect x="1176" y="30" width="64" height="10" fill="#FF003C"/>
+  <text x="640" y="86" class="f b" font-size="34" fill="#F2F2F2" text-anchor="middle" letter-spacing="10" textLength="494" lengthAdjust="spacingAndGlyphs">END OF TRANSMISSION</text>
+  <text x="640" y="118" class="f" font-size="18" fill="#5EF6FF" text-anchor="middle" letter-spacing="6" textLength="382" lengthAdjust="spacingAndGlyphs">SEE YOU IN NIGHT CITY, CHOOM</text>
+  <rect class="cur" x="838" y="104" width="10" height="16" fill="#5EF6FF"/>
+</svg>

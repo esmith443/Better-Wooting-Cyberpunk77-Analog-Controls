@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="96" viewBox="0 0 1280 96" role="img" aria-label="05 DEBUG MODE">
+  <style>.f { font-family: Bahnschrift, 'DIN Condensed', 'Arial Narrow', 'Roboto Condensed', 'Segoe UI', sans-serif; font-stretch: condensed; } .b { font-weight: 700; }</style>
+  <polygon points="0,8 1264,8 1280,24 1280,88 16,88 0,72" fill="#0A0A0D"/>
+  <polygon points="0,8 122,8 146,32 146,88 16,88 0,72" fill="#FCEE0A"/>
+  <text x="22" y="70" class="f b" font-size="52" fill="#0A0A0D">05</text>
+  <text x="170" y="66" class="f b" font-size="40" fill="#F2F2F2" letter-spacing="5" textLength="252" lengthAdjust="spacingAndGlyphs">DEBUG MODE</text>
+  <rect x="452" y="47" width="698" height="2" fill="#FCEE0A" opacity="0.75"/>
+  <rect x="1158" y="41" width="56" height="14" fill="#FF003C"/>
+  <rect x="1220" y="41" width="10" height="14" fill="#FF003C" opacity="0.5"/>
+  <text x="1262" y="80" class="f" font-size="13" fill="#5EF6FF" text-anchor="end" letter-spacing="3">// LIVE METERS</text>
+</svg>
