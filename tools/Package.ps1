@@ -1,9 +1,28 @@
 param(
-    [Parameter(Mandatory = $true)][string]$BuildDir
+    [Parameter(Mandatory = $true)][string]$BuildDir,
+    [string]$OutDir
 )
 $ErrorActionPreference = 'Stop'
+Add-Type -AssemblyName System.IO.Compression
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+
+function New-Zip([string]$Source, [string]$Destination) {
+    $root = (Resolve-Path $Source).Path.TrimEnd('\') + '\'
+    $stream = [IO.File]::Open($Destination, [IO.FileMode]::Create)
+    $zip = New-Object IO.Compression.ZipArchive($stream, [IO.Compression.ZipArchiveMode]::Create)
+    try {
+        foreach ($file in Get-ChildItem -Recurse -File $Source) {
+            $name = $file.FullName.Substring($root.Length).Replace('\', '/')
+            [IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $file.FullName, $name, [IO.Compression.CompressionLevel]::Optimal) | Out-Null
+        }
+    } finally {
+        $zip.Dispose()
+        $stream.Dispose()
+    }
+}
+
 $root = Split-Path -Parent $PSScriptRoot
-$dist = Join-Path $root 'dist'
+$dist = if ($OutDir) { $OutDir } else { Join-Path $root 'dist' }
 $mod = Join-Path $dist 'mod'
 
 $versionLine = Select-String -Path (Join-Path $root 'src\Version.hpp') -Pattern 'WA_VERSION_STRING "([^"]+)"'
@@ -23,11 +42,15 @@ Copy-Item (Join-Path $BuildDir 'WootingAnalogCheck.exe') $pluginDir
 Copy-Item (Join-Path $root 'scripts\WootingAnalog\*.reds') $scriptDir
 
 $zip = Join-Path $dist "WootingAnalog-$version.zip"
-Compress-Archive -Path (Join-Path $mod '*') -DestinationPath $zip
+New-Zip $mod $zip
 
 Copy-Item (Join-Path $root 'tools\Install-WootingAnalog.ps1') $dist
 Copy-Item (Join-Path $root 'tools\Setup.bat') $dist
 Copy-Item (Join-Path $root 'README.md') $dist
+
+$setupZip = Join-Path ([IO.Path]::GetTempPath()) "WootingAnalog-$version-setup.zip"
+New-Zip $dist $setupZip
+Move-Item -Force $setupZip (Join-Path $dist "WootingAnalog-$version-setup.zip")
 
 Write-Host ""
 Write-Host "Packaged Wooting Analog $version"
