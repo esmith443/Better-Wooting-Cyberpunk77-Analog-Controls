@@ -32,11 +32,13 @@ No gamepad emulation in Wootility. No edited game files. Your keybinds stay your
 ## // INSTALL
 
 1. Grab `WootingAnalog-x.y.z.zip` from [Releases](../../releases).
-2. **Vortex:** *Install From File*, then deploy. **Manual:** drop `red4ext` and `r6` into your game folder.
+2. **Vortex:** Mods → *Install From File* → pick the zip → enable → Deploy.
+   **Manual:** copy the zip's `red4ext` and `r6` folders into your `Cyberpunk 2077` folder, merging folders.
 3. Wootility → Settings → Gamepad mode → **None**.
-4. Jack in. Your HUD will say `Wooting ... detected`.
+4. Jack in and load a save. Your HUD will say `Wooting ... detected`.
+5. Restart once more: analog throttle and brake come online from the second launch.
 
-Analog throttle and brake come online from the second launch.
+**Uninstall:** remove it in Vortex, or delete `red4ext/plugins/WootingAnalog` and `r6/scripts/WootingAnalog`.
 
 > Ran the old *Analog Keyboard Movement and Driving Binds* mod? Verify your game files first, it overwrote `inputUserMappings.xml`.
 
@@ -63,4 +65,6 @@ Needs Visual Studio 2022+ with the C++ workload. Output lands in `dist/`.
 
 ## // FLATLINED?
 
-`tools/Setup.bat -CheckOnly` scans your rig and names the problem. Logs: `red4ext/logs/WootingAnalog-*.log`.
+- HUD says `Wooting Analog off: ...`? It names the missing piece: keyboard, SDK or Input Loader.
+- No HUD message at all? redscript is broken by another mod: check `r6/logs/redscript_rCURRENT.log`.
+- Everything else lives in `red4ext/logs/WootingAnalog-*.log` and `red4ext/plugins/WootingAnalog/WootingAnalog.status.txt`.
