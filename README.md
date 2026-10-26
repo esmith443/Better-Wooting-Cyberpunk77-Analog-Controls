@@ -48,10 +48,9 @@
 
 **Settings → Mods → Wooting Analog**, live while you play. No Mod Settings? Edit `red4ext/plugins/WootingAnalog/WootingAnalog.ini`.
 
-<p align="center">
-  <img src="media/settings-general.svg" width="49%" alt="Mod Settings: general switches">
-  <img src="media/settings-tuning.svg" width="49%" alt="Mod Settings: tuning per action">
-</p>
+<img src="media/settings-general.svg" width="100%" alt="Mod Settings: general switches">
+
+<img src="media/settings-tuning.svg" width="100%" alt="Mod Settings: tuning per action">
 
 | Knob | Does |
 |---|---|
